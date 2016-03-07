@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "987AAA4A1C83CB3A0091731A"
+               BlueprintIdentifier = "98A548D61C83D54A0048E685"
                BuildableName = "TopTomatoes.app"
                BlueprintName = "TopTomatoes"
                ReferencedContainer = "container:TopTomatoes.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "987AAA601C83CB3A0091731A"
+               BlueprintIdentifier = "98A548EC1C83D54A0048E685"
                BuildableName = "TopTomatoesTests.xctest"
                BlueprintName = "TopTomatoesTests"
                ReferencedContainer = "container:TopTomatoes.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "987AAA4A1C83CB3A0091731A"
+            BlueprintIdentifier = "98A548D61C83D54A0048E685"
             BuildableName = "TopTomatoes.app"
             BlueprintName = "TopTomatoes"
             ReferencedContainer = "container:TopTomatoes.xcodeproj">
@@ -65,7 +65,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "987AAA4A1C83CB3A0091731A"
+            BlueprintIdentifier = "98A548D61C83D54A0048E685"
             BuildableName = "TopTomatoes.app"
             BlueprintName = "TopTomatoes"
             ReferencedContainer = "container:TopTomatoes.xcodeproj">
@@ -84,7 +84,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "987AAA4A1C83CB3A0091731A"
+            BlueprintIdentifier = "98A548D61C83D54A0048E685"
             BuildableName = "TopTomatoes.app"
             BlueprintName = "TopTomatoes"
             ReferencedContainer = "container:TopTomatoes.xcodeproj">

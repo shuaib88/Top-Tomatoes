@@ -7,48 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		987AAA4F1C83CB3A0091731A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AAA4E1C83CB3A0091731A /* AppDelegate.swift */; };
-		987AAA511C83CB3A0091731A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AAA501C83CB3A0091731A /* FirstViewController.swift */; };
-		987AAA531C83CB3A0091731A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AAA521C83CB3A0091731A /* SecondViewController.swift */; };
-		987AAA561C83CB3A0091731A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987AAA541C83CB3A0091731A /* Main.storyboard */; };
-		987AAA581C83CB3A0091731A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987AAA571C83CB3A0091731A /* Assets.xcassets */; };
-		987AAA5B1C83CB3A0091731A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987AAA591C83CB3A0091731A /* LaunchScreen.storyboard */; };
-		987AAA661C83CB3A0091731A /* TopTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AAA651C83CB3A0091731A /* TopTomatoesTests.swift */; };
+		98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DA1C83D54A0048E685 /* AppDelegate.swift */; };
+		98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DC1C83D54A0048E685 /* FirstViewController.swift */; };
+		98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DE1C83D54A0048E685 /* SecondViewController.swift */; };
+		98A548E21C83D54A0048E685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E01C83D54A0048E685 /* Main.storyboard */; };
+		98A548E41C83D54A0048E685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E31C83D54A0048E685 /* Assets.xcassets */; };
+		98A548E71C83D54A0048E685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */; };
+		98A548F21C83D54A0048E685 /* TopTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548F11C83D54A0048E685 /* TopTomatoesTests.swift */; };
+		98A548FD1C83F53C0048E685 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548FC1C83F53C0048E685 /* BaseTableViewController.swift */; };
+		98A548FF1C83FD1C0048E685 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548FE1C83FD1C0048E685 /* MovieTableViewCell.swift */; };
+		98A549011C8515ED0048E685 /* TMDBNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A549001C8515ED0048E685 /* TMDBNetworkingManager.swift */; };
+		98B5B3541C8CFD51009EA492 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5B3531C8CFD51009EA492 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		987AAA621C83CB3A0091731A /* PBXContainerItemProxy */ = {
+		98A548EE1C83D54A0048E685 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 987AAA431C83CB3A0091731A /* Project object */;
+			containerPortal = 98A548CF1C83D54A0048E685 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 987AAA4A1C83CB3A0091731A;
+			remoteGlobalIDString = 98A548D61C83D54A0048E685;
 			remoteInfo = TopTomatoes;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		987AAA4B1C83CB3A0091731A /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		987AAA4E1C83CB3A0091731A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		987AAA501C83CB3A0091731A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		987AAA521C83CB3A0091731A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		987AAA551C83CB3A0091731A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		987AAA571C83CB3A0091731A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		987AAA5A1C83CB3A0091731A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		987AAA5C1C83CB3A0091731A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987AAA611C83CB3A0091731A /* TopTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		987AAA651C83CB3A0091731A /* TopTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTomatoesTests.swift; sourceTree = "<group>"; };
-		987AAA671C83CB3A0091731A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A548D71C83D54A0048E685 /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A548DA1C83D54A0048E685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		98A548DC1C83D54A0048E685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		98A548DE1C83D54A0048E685 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		98A548E11C83D54A0048E685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98A548E31C83D54A0048E685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98A548E61C83D54A0048E685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98A548E81C83D54A0048E685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A548ED1C83D54A0048E685 /* TopTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A548F11C83D54A0048E685 /* TopTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTomatoesTests.swift; sourceTree = "<group>"; };
+		98A548F31C83D54A0048E685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A548FC1C83F53C0048E685 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		98A548FE1C83FD1C0048E685 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		98A549001C8515ED0048E685 /* TMDBNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBNetworkingManager.swift; sourceTree = "<group>"; };
+		98B5B3531C8CFD51009EA492 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		987AAA481C83CB3A0091731A /* Frameworks */ = {
+		98A548D41C83D54A0048E685 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		987AAA5E1C83CB3A0091731A /* Frameworks */ = {
+		98A548EA1C83D54A0048E685 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,43 +66,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		987AAA421C83CB3A0091731A = {
+		98A548CE1C83D54A0048E685 = {
 			isa = PBXGroup;
 			children = (
-				987AAA4D1C83CB3A0091731A /* TopTomatoes */,
-				987AAA641C83CB3A0091731A /* TopTomatoesTests */,
-				987AAA4C1C83CB3A0091731A /* Products */,
+				98A548D91C83D54A0048E685 /* TopTomatoes */,
+				98A548F01C83D54A0048E685 /* TopTomatoesTests */,
+				98A548D81C83D54A0048E685 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		987AAA4C1C83CB3A0091731A /* Products */ = {
+		98A548D81C83D54A0048E685 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				987AAA4B1C83CB3A0091731A /* TopTomatoes.app */,
-				987AAA611C83CB3A0091731A /* TopTomatoesTests.xctest */,
+				98A548D71C83D54A0048E685 /* TopTomatoes.app */,
+				98A548ED1C83D54A0048E685 /* TopTomatoesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		987AAA4D1C83CB3A0091731A /* TopTomatoes */ = {
+		98A548D91C83D54A0048E685 /* TopTomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				987AAA4E1C83CB3A0091731A /* AppDelegate.swift */,
-				987AAA501C83CB3A0091731A /* FirstViewController.swift */,
-				987AAA521C83CB3A0091731A /* SecondViewController.swift */,
-				987AAA541C83CB3A0091731A /* Main.storyboard */,
-				987AAA571C83CB3A0091731A /* Assets.xcassets */,
-				987AAA591C83CB3A0091731A /* LaunchScreen.storyboard */,
-				987AAA5C1C83CB3A0091731A /* Info.plist */,
+				98A548DA1C83D54A0048E685 /* AppDelegate.swift */,
+				98A548DC1C83D54A0048E685 /* FirstViewController.swift */,
+				98A548FC1C83F53C0048E685 /* BaseTableViewController.swift */,
+				98B5B3531C8CFD51009EA492 /* MovieDetailViewController.swift */,
+				98A549001C8515ED0048E685 /* TMDBNetworkingManager.swift */,
+				98A548FE1C83FD1C0048E685 /* MovieTableViewCell.swift */,
+				98A548DE1C83D54A0048E685 /* SecondViewController.swift */,
+				98A548E01C83D54A0048E685 /* Main.storyboard */,
+				98A548E31C83D54A0048E685 /* Assets.xcassets */,
+				98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */,
+				98A548E81C83D54A0048E685 /* Info.plist */,
 			);
 			path = TopTomatoes;
 			sourceTree = "<group>";
 		};
-		987AAA641C83CB3A0091731A /* TopTomatoesTests */ = {
+		98A548F01C83D54A0048E685 /* TopTomatoesTests */ = {
 			isa = PBXGroup;
 			children = (
-				987AAA651C83CB3A0091731A /* TopTomatoesTests.swift */,
-				987AAA671C83CB3A0091731A /* Info.plist */,
+				98A548F11C83D54A0048E685 /* TopTomatoesTests.swift */,
+				98A548F31C83D54A0048E685 /* Info.plist */,
 			);
 			path = TopTomatoesTests;
 			sourceTree = "<group>";
@@ -102,13 +114,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		987AAA4A1C83CB3A0091731A /* TopTomatoes */ = {
+		98A548D61C83D54A0048E685 /* TopTomatoes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987AAA6A1C83CB3A0091731A /* Build configuration list for PBXNativeTarget "TopTomatoes" */;
+			buildConfigurationList = 98A548F61C83D54A0048E685 /* Build configuration list for PBXNativeTarget "TopTomatoes" */;
 			buildPhases = (
-				987AAA471C83CB3A0091731A /* Sources */,
-				987AAA481C83CB3A0091731A /* Frameworks */,
-				987AAA491C83CB3A0091731A /* Resources */,
+				98A548D31C83D54A0048E685 /* Sources */,
+				98A548D41C83D54A0048E685 /* Frameworks */,
+				98A548D51C83D54A0048E685 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -116,47 +128,47 @@
 			);
 			name = TopTomatoes;
 			productName = TopTomatoes;
-			productReference = 987AAA4B1C83CB3A0091731A /* TopTomatoes.app */;
+			productReference = 98A548D71C83D54A0048E685 /* TopTomatoes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		987AAA601C83CB3A0091731A /* TopTomatoesTests */ = {
+		98A548EC1C83D54A0048E685 /* TopTomatoesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 987AAA6D1C83CB3A0091731A /* Build configuration list for PBXNativeTarget "TopTomatoesTests" */;
+			buildConfigurationList = 98A548F91C83D54A0048E685 /* Build configuration list for PBXNativeTarget "TopTomatoesTests" */;
 			buildPhases = (
-				987AAA5D1C83CB3A0091731A /* Sources */,
-				987AAA5E1C83CB3A0091731A /* Frameworks */,
-				987AAA5F1C83CB3A0091731A /* Resources */,
+				98A548E91C83D54A0048E685 /* Sources */,
+				98A548EA1C83D54A0048E685 /* Frameworks */,
+				98A548EB1C83D54A0048E685 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				987AAA631C83CB3A0091731A /* PBXTargetDependency */,
+				98A548EF1C83D54A0048E685 /* PBXTargetDependency */,
 			);
 			name = TopTomatoesTests;
 			productName = TopTomatoesTests;
-			productReference = 987AAA611C83CB3A0091731A /* TopTomatoesTests.xctest */;
+			productReference = 98A548ED1C83D54A0048E685 /* TopTomatoesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		987AAA431C83CB3A0091731A /* Project object */ = {
+		98A548CF1C83D54A0048E685 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Shuaib Labs";
 				TargetAttributes = {
-					987AAA4A1C83CB3A0091731A = {
+					98A548D61C83D54A0048E685 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
-					987AAA601C83CB3A0091731A = {
+					98A548EC1C83D54A0048E685 = {
 						CreatedOnToolsVersion = 7.2.1;
-						TestTargetID = 987AAA4A1C83CB3A0091731A;
+						TestTargetID = 98A548D61C83D54A0048E685;
 					};
 				};
 			};
-			buildConfigurationList = 987AAA461C83CB3A0091731A /* Build configuration list for PBXProject "TopTomatoes" */;
+			buildConfigurationList = 98A548D21C83D54A0048E685 /* Build configuration list for PBXProject "TopTomatoes" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -164,29 +176,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 987AAA421C83CB3A0091731A;
-			productRefGroup = 987AAA4C1C83CB3A0091731A /* Products */;
+			mainGroup = 98A548CE1C83D54A0048E685;
+			productRefGroup = 98A548D81C83D54A0048E685 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				987AAA4A1C83CB3A0091731A /* TopTomatoes */,
-				987AAA601C83CB3A0091731A /* TopTomatoesTests */,
+				98A548D61C83D54A0048E685 /* TopTomatoes */,
+				98A548EC1C83D54A0048E685 /* TopTomatoesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		987AAA491C83CB3A0091731A /* Resources */ = {
+		98A548D51C83D54A0048E685 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987AAA5B1C83CB3A0091731A /* LaunchScreen.storyboard in Resources */,
-				987AAA581C83CB3A0091731A /* Assets.xcassets in Resources */,
-				987AAA561C83CB3A0091731A /* Main.storyboard in Resources */,
+				98A548E71C83D54A0048E685 /* LaunchScreen.storyboard in Resources */,
+				98A548E41C83D54A0048E685 /* Assets.xcassets in Resources */,
+				98A548E21C83D54A0048E685 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		987AAA5F1C83CB3A0091731A /* Resources */ = {
+		98A548EB1C83D54A0048E685 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,47 +208,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		987AAA471C83CB3A0091731A /* Sources */ = {
+		98A548D31C83D54A0048E685 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987AAA531C83CB3A0091731A /* SecondViewController.swift in Sources */,
-				987AAA4F1C83CB3A0091731A /* AppDelegate.swift in Sources */,
-				987AAA511C83CB3A0091731A /* FirstViewController.swift in Sources */,
+				98A548FF1C83FD1C0048E685 /* MovieTableViewCell.swift in Sources */,
+				98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */,
+				98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */,
+				98A548FD1C83F53C0048E685 /* BaseTableViewController.swift in Sources */,
+				98B5B3541C8CFD51009EA492 /* MovieDetailViewController.swift in Sources */,
+				98A549011C8515ED0048E685 /* TMDBNetworkingManager.swift in Sources */,
+				98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		987AAA5D1C83CB3A0091731A /* Sources */ = {
+		98A548E91C83D54A0048E685 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987AAA661C83CB3A0091731A /* TopTomatoesTests.swift in Sources */,
+				98A548F21C83D54A0048E685 /* TopTomatoesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		987AAA631C83CB3A0091731A /* PBXTargetDependency */ = {
+		98A548EF1C83D54A0048E685 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 987AAA4A1C83CB3A0091731A /* TopTomatoes */;
-			targetProxy = 987AAA621C83CB3A0091731A /* PBXContainerItemProxy */;
+			target = 98A548D61C83D54A0048E685 /* TopTomatoes */;
+			targetProxy = 98A548EE1C83D54A0048E685 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		987AAA541C83CB3A0091731A /* Main.storyboard */ = {
+		98A548E01C83D54A0048E685 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				987AAA551C83CB3A0091731A /* Base */,
+				98A548E11C83D54A0048E685 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		987AAA591C83CB3A0091731A /* LaunchScreen.storyboard */ = {
+		98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				987AAA5A1C83CB3A0091731A /* Base */,
+				98A548E61C83D54A0048E685 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -244,7 +260,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		987AAA681C83CB3A0091731A /* Debug */ = {
+		98A548F41C83D54A0048E685 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,7 +304,7 @@
 			};
 			name = Debug;
 		};
-		987AAA691C83CB3A0091731A /* Release */ = {
+		98A548F51C83D54A0048E685 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -325,7 +341,7 @@
 			};
 			name = Release;
 		};
-		987AAA6B1C83CB3A0091731A /* Debug */ = {
+		98A548F71C83D54A0048E685 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -336,7 +352,7 @@
 			};
 			name = Debug;
 		};
-		987AAA6C1C83CB3A0091731A /* Release */ = {
+		98A548F81C83D54A0048E685 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -347,7 +363,7 @@
 			};
 			name = Release;
 		};
-		987AAA6E1C83CB3A0091731A /* Debug */ = {
+		98A548FA1C83D54A0048E685 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -359,7 +375,7 @@
 			};
 			name = Debug;
 		};
-		987AAA6F1C83CB3A0091731A /* Release */ = {
+		98A548FB1C83D54A0048E685 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -374,32 +390,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		987AAA461C83CB3A0091731A /* Build configuration list for PBXProject "TopTomatoes" */ = {
+		98A548D21C83D54A0048E685 /* Build configuration list for PBXProject "TopTomatoes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				987AAA681C83CB3A0091731A /* Debug */,
-				987AAA691C83CB3A0091731A /* Release */,
+				98A548F41C83D54A0048E685 /* Debug */,
+				98A548F51C83D54A0048E685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		987AAA6A1C83CB3A0091731A /* Build configuration list for PBXNativeTarget "TopTomatoes" */ = {
+		98A548F61C83D54A0048E685 /* Build configuration list for PBXNativeTarget "TopTomatoes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				987AAA6B1C83CB3A0091731A /* Debug */,
-				987AAA6C1C83CB3A0091731A /* Release */,
+				98A548F71C83D54A0048E685 /* Debug */,
+				98A548F81C83D54A0048E685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		987AAA6D1C83CB3A0091731A /* Build configuration list for PBXNativeTarget "TopTomatoesTests" */ = {
+		98A548F91C83D54A0048E685 /* Build configuration list for PBXNativeTarget "TopTomatoesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				987AAA6E1C83CB3A0091731A /* Debug */,
-				987AAA6F1C83CB3A0091731A /* Release */,
+				98A548FA1C83D54A0048E685 /* Debug */,
+				98A548FB1C83D54A0048E685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 987AAA431C83CB3A0091731A /* Project object */;
+	rootObject = 98A548CF1C83D54A0048E685 /* Project object */;
 }
