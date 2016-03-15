@@ -16,6 +16,8 @@ class MovieDetailViewController: UIViewController {
     
     var movietitle: String?
     var movieimage: UIImage?
+    var imageUrl: String?
+    
     // add url and build in view did appear
     // add function that downloads image
 
@@ -27,7 +29,64 @@ class MovieDetailViewController: UIViewController {
         if let title = movietitle {
             movieTitle.text = title
             movieImage.image = movieimage
+            print(imageUrl)
         }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        // call downloadwithclosure
+        downloadImageWithClosure(imageUrl!)
+     }
+    
+    func downloadImageWithClosure(url: String) {
+        let startTime = CFAbsoluteTimeGetCurrent()
+        
+        let nsUrl = NSURL(string: url)
+        
+        // Make the download call
+        downloadImage(nsUrl!) { (downloadedImage) -> () in
+            // Ensure the completion block is on the main thread
+            sleep(3)
+            self.movieImage.image = downloadedImage
+            print("Elaspsed Time: " + (NSString(format: "%2.5f", CFAbsoluteTimeGetCurrent() - startTime) as String))
+        }
+    }
+    
+    func downloadImage(url: NSURL, completion: (UIImage)->()) {
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
+            
+            // Check that there was no data; this is misleading since a 404 does not
+            // return an error.  Note: All paramters in the completion handler are optionals
+            guard error == nil else {
+                print("error: \(error!.localizedDescription): \(error!.userInfo)")
+                return
+            }
+            
+            guard response != nil else {
+                // Check the response
+                print("Response: \(response)")
+                return
+            }
+            
+            guard let taskData: NSData = data where data != nil else {
+                print("Error with data")
+                return
+            }
+            
+            // Create a UIImage from the response data and pass it to the completion
+            // handler
+            //print(taskData)
+            if let image = UIImage(data: taskData) {
+                print("Done downloading")
+                dispatch_async(dispatch_get_main_queue()) {
+                    completion(image)
+                }
+            }
+        })
+        
+        // Tasks start in the suspended state, so resume it to start immediately
+        task.resume()
     }
 
     /*

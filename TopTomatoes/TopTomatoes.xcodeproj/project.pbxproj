@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */; };
 		98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DA1C83D54A0048E685 /* AppDelegate.swift */; };
 		98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DC1C83D54A0048E685 /* FirstViewController.swift */; };
 		98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DE1C83D54A0048E685 /* SecondViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		98A548D71C83D54A0048E685 /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A548DA1C83D54A0048E685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A548DC1C83D54A0048E685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				98A548E31C83D54A0048E685 /* Assets.xcassets */,
 				98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */,
 				98A548E81C83D54A0048E685 /* Info.plist */,
+				981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */,
 			);
 			path = TopTomatoes;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */,
 				98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */,
 				98A548FD1C83F53C0048E685 /* BaseTableViewController.swift in Sources */,
+				981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */,
 				98B5B3541C8CFD51009EA492 /* MovieDetailViewController.swift in Sources */,
 				98A549011C8515ED0048E685 /* TMDBNetworkingManager.swift in Sources */,
 				98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */,

@@ -187,25 +187,23 @@ class BaseTableViewController: UITableViewController {
     /// Segue function
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "show detail" {
-            
             let movieDetailController = segue.destinationViewController as! MovieDetailViewController
             
-//            if let movieDetailController = movieDetailController {
-                // get the cell that generated the segue
-                if let selectedMovieCell = sender as? MovieTableViewCell {
-                    let indexPath = tableView.indexPathForCell(selectedMovieCell)!
-                    let selectedMovie = movieResponse[indexPath.row]
-                    
-                    //populate the next view
-                    movieDetailController.movietitle = selectedMovie["title"] as? String
-                    movieDetailController.movieimage = selectedMovieCell.thumbImage.image
-                    
-//                    movieDetailController.movieTitle.text = "Poop"
-
-                }
-//            }
-        }
+            // get the cell that generated the segue
+            if let selectedMovieCell = sender as? MovieTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedMovieCell)!
+                let selectedMovie = movieResponse[indexPath.row]
+                
+                
+                // build the url string
+                let imageUrlStub = selectedMovie["poster_path"]! as? String
+                let logoimageURL = "http://image.tmdb.org/t/p/w185" + imageUrlStub!
+                
+                //populate the next view
+                movieDetailController.movietitle = selectedMovie["title"] as? String
+                movieDetailController.movieimage = selectedMovieCell.thumbImage.image
+                movieDetailController.imageUrl = logoimageURL
+            }
     }
     
     /// Helper functions
