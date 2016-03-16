@@ -17,6 +17,10 @@ class MovieDetailViewController: UIViewController {
     var movietitle: String?
     var movieimage: UIImage?
     var imageUrl: String?
+    var plotOverview: String?
+    
+    // activity indicator
+    var _activityIndicator: ActivityIndicatorView?
     
     // add url and build in view did appear
     // add function that downloads image
@@ -30,13 +34,28 @@ class MovieDetailViewController: UIViewController {
             movieTitle.text = title
             movieImage.image = movieimage
             print(imageUrl)
+            plotSummary.text = plotOverview
         }
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let _ = _activityIndicator {
+        } else {
+            self._activityIndicator = ActivityIndicatorView()
+            self.view.addSubview(_activityIndicator!)
+        }
+        
         // call downloadwithclosure
         downloadImageWithClosure(imageUrl!)
      }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self._activityIndicator!.removeFromSuperview()
+    }
     
     func downloadImageWithClosure(url: String) {
         let startTime = CFAbsoluteTimeGetCurrent()
@@ -46,7 +65,7 @@ class MovieDetailViewController: UIViewController {
         // Make the download call
         downloadImage(nsUrl!) { (downloadedImage) -> () in
             // Ensure the completion block is on the main thread
-            sleep(3)
+            sleep(1)
             self.movieImage.image = downloadedImage
             print("Elaspsed Time: " + (NSString(format: "%2.5f", CFAbsoluteTimeGetCurrent() - startTime) as String))
         }

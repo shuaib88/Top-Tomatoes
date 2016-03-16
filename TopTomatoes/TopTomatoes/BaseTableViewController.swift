@@ -17,14 +17,21 @@ class BaseTableViewController: UITableViewController {
     // this will hold my data from the API Call
     var movieResponse = [[String:AnyObject]]()
     
-    // movie result
+    var _activityIndicator: ActivityIndicatorView?
     
+    // movie result
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        if let _ = _activityIndicator {
+        } else {
+            self._activityIndicator = ActivityIndicatorView()
+            self.view.addSubview(_activityIndicator!)
+        }
         
         TMDBNetworkingManager.sharedInstance.searchRequest(url) { (response) -> Void in
             
@@ -43,10 +50,15 @@ class BaseTableViewController: UITableViewController {
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
-            
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-
+        // remove activity indicator
+        sleep(1)
+        self._activityIndicator!.removeFromSuperview()
     }
 
     // MARK: - Table view data source
@@ -127,7 +139,7 @@ class BaseTableViewController: UITableViewController {
         
         let voteFloat = movieResult["vote_average"]! as? Float
         let voteAverage = String(format:"%.1f", voteFloat!)
-        cell.averageVote.text = voteAverage
+        cell.averageVote.text = "Rating: " + voteAverage
         
         // build image url
         let imageUrlStub = movieResult["poster_path"]! as? String
@@ -136,53 +148,12 @@ class BaseTableViewController: UITableViewController {
         // get image
         downloadImageWithClosure(logoimageURL, cell: cell)
         
+        // stylize the font
+        cell.movieTitle.font = UIFont (name: "HelveticaNeue", size: 17)
+        cell.averageVote.font = UIFont (name: "HelveticaNeue", size: 17)
+        
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     /// Segue function
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -203,6 +174,7 @@ class BaseTableViewController: UITableViewController {
                 movieDetailController.movietitle = selectedMovie["title"] as? String
                 movieDetailController.movieimage = selectedMovieCell.thumbImage.image
                 movieDetailController.imageUrl = logoimageURL
+                movieDetailController.plotOverview = selectedMovie["overview"] as? String
             }
     }
     
