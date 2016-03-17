@@ -56,8 +56,6 @@ class BaseTableViewController: UITableViewController {
         
         center.addObserver(self, selector: "setWasSplashShownFalse", name: UIApplicationWillEnterForegroundNotification, object: nil)
         
-        myDefaults.setBool(false, forKey: "wasSplashShown")
-        
         // if not shown before
         wasSplashShown()
         
@@ -281,14 +279,14 @@ class BaseTableViewController: UITableViewController {
         devName.textAlignment = .Center
         splashView.addSubview(devName)
         
-        let instruction = UILabel(frame: CGRectMake(0,0,200,100))
+        let instruction = UILabel(frame: CGRectMake(0,0,200,200))
         instruction.lineBreakMode = .ByWordWrapping
         instruction.numberOfLines = 0
-        instruction.text = "Instructions: \n Use this app to browse movies in theatres and coming soon. \n After selecting a movie tap the star to save it as a favorite"
+        instruction.text = "Instructions: \n Use this app to browse movies in theatres and coming soon. \n After selecting a movie tap the star to save it as a favorite \n \n This product uses the TMDb \n API but is not endorsed \n or certified by TMDb."
         instruction.font = UIFont (name: "HelveticaNeue", size: 14)
         instruction.textColor = UIColor.whiteColor()
         instruction.center.x = self.view.center.x
-        instruction.center.y = self.view.center.y + 75
+        instruction.center.y = self.view.center.y + 100
         instruction.textAlignment = .Center
         splashView.addSubview(instruction)
         
@@ -304,7 +302,7 @@ class BaseTableViewController: UITableViewController {
         
         topViewController?.view.addSubview(splashView)
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 8 * Int64(NSEC_PER_SEC))
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
             //put your code which should be executed with a delay here
             splashView.removeFromSuperview()

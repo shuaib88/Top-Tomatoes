@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         userDefaults.registerDefaults(defaults)
         userDefaults.synchronize()
-//        print(userDefaults.dictionaryRepresentation())
+        
+        // for splash screen
+        userDefaults.setBool(false, forKey: "wasSplashShown")
         
         // set the defaults
         if let date = userDefaults.objectForKey("firstLaunch"){
