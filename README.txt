@@ -13,3 +13,5 @@ Attributions:
 /// - Attributions: http://www.ioscreator.com/tutorials/display-activity-indicator-status-bar-ios8-swift
 
 /// - Attributions: thanks to The Movie Database for providing a free API to get information about current movies https://www.themoviedb.org/
+
+/// - Attributions: thanks to Prof. Andrew Binkowski for the code for downloading images

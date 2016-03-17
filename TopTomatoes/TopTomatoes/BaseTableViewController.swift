@@ -115,7 +115,8 @@ class BaseTableViewController: UITableViewController {
         
         return CGFloat(70)
     }
-    
+
+    /// - Attributions: thanks to Prof. Andrew Binkowski for the code for downloading images
     func downloadImageWithClosure(url: String, cell: MovieTableViewCell) {
         let startTime = CFAbsoluteTimeGetCurrent()
         
