@@ -27,12 +27,7 @@ class BaseTableViewController: UITableViewController {
         
         // Register default values for settings
         let namePreference = myDefaults.stringForKey("name_preference")
-        let sliderPreference = myDefaults.doubleForKey("slider_preference")
-        let enabledPreference = myDefaults.boolForKey("enabled_preference")
-        
         print("Name: \(namePreference)")
-        print("Slider: \(sliderPreference)")
-        print("Enabled: \(enabledPreference)")
     }
     
     override func viewDidLoad() {
@@ -52,7 +47,7 @@ class BaseTableViewController: UITableViewController {
         return nil
     }
     
-    // get initial data
+    // get initial data and add notification center
     override func viewWillAppear(animated: Bool) {
         
         let center = NSNotificationCenter.defaultCenter()
@@ -60,6 +55,8 @@ class BaseTableViewController: UITableViewController {
         center.addObserver(self, selector: "addSplashView", name: UIApplicationDidBecomeActiveNotification, object: nil)
         
         center.addObserver(self, selector: "setWasSplashShownFalse", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+        myDefaults.setBool(false, forKey: "wasSplashShown")
         
         // if not shown before
         wasSplashShown()
@@ -258,12 +255,16 @@ class BaseTableViewController: UITableViewController {
     
     // adds splash for first time launch
     func wasSplashShown() -> Void {
-        if myDefaults.boolForKey("wasSplashShown") {
+        if myDefaults.boolForKey("wasSplashShown") == true {
             
         } else {
             addSplashView()
             myDefaults.setBool(true, forKey: "wasSplashShown")
         }
+    }
+    
+    func notificationCenterCalled() -> Void {
+        print("NSNotificationCenter Called")
     }
 
     // adds splashview to top of view
@@ -280,6 +281,18 @@ class BaseTableViewController: UITableViewController {
         devName.textAlignment = .Center
         splashView.addSubview(devName)
         
+        let instruction = UILabel(frame: CGRectMake(0,0,200,100))
+        instruction.lineBreakMode = .ByWordWrapping
+        instruction.numberOfLines = 0
+        instruction.text = "Instructions: \n Use this app to browse movies in theatres and coming soon. \n After selecting a movie tap the star to save it as a favorite"
+        instruction.font = UIFont (name: "HelveticaNeue", size: 14)
+        instruction.textColor = UIColor.whiteColor()
+        instruction.center.x = self.view.center.x
+        instruction.center.y = self.view.center.y + 75
+        instruction.textAlignment = .Center
+        splashView.addSubview(instruction)
+        
+        
         let tomatoImage = UIImage(named: "tomato")
         let tomatoView = UIImageView(image: tomatoImage)
         tomatoView.center.x = self.view.center.x
@@ -291,7 +304,7 @@ class BaseTableViewController: UITableViewController {
         
         topViewController?.view.addSubview(splashView)
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 8 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
             //put your code which should be executed with a delay here
             splashView.removeFromSuperview()

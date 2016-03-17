@@ -147,11 +147,11 @@ class MovieDetailViewController: UIViewController {
         }
         
         // create detailItem object
-        var detailItem = [String:String]()
-        detailItem["title"] = movietitle
-        detailItem["vote_average"] = voteAverage
-        detailItem["poster_path"] = posterPath
-        detailItem["overview"] = plotOverview
+//        var detailItem = [String:String]()
+//        detailItem["title"] = movietitle
+//        detailItem["vote_average"] = voteAverage
+//        detailItem["poster_path"] = posterPath
+//        detailItem["overview"] = plotOverview
         
         // add or remove in favorites
         if isCurrentMovieInFavorites() {
