@@ -30,6 +30,8 @@ class BaseTableViewController: UITableViewController {
             self.view.addSubview(_activityIndicator!)
         }
         
+        print("initial API call: \(url)")
+        
         TMDBNetworkingManager.sharedInstance.searchRequest(url) { (response) -> Void in
             
             // Test that response is not nil and unwrap
@@ -134,7 +136,6 @@ class BaseTableViewController: UITableViewController {
         
         cell.movieTitle.text = movieResult["title"]! as? String
         
-        print(movieResult["vote_average"]!.dynamicType)
         let voteFloat = movieResult["vote_average"]! as? Float
         let voteAverage = String(format:"%.1f", voteFloat!)
         cell.averageVote.text = "Rating: " + voteAverage
@@ -148,6 +149,7 @@ class BaseTableViewController: UITableViewController {
         }
         
         let logoimageURL = "http://image.tmdb.org/t/p/w45" + imageUrlStub!
+        print(logoimageURL)
         
         // get image
         downloadImageWithClosure(logoimageURL, cell: cell)
