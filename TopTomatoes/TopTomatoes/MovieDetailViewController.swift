@@ -22,6 +22,10 @@ class MovieDetailViewController: UIViewController {
     // activity indicator
     var _activityIndicator: ActivityIndicatorView?
     
+    // star images
+    let filledStar: UIImage = UIImage(named: "star")!
+    let unfilledStar: UIImage = UIImage(named: "unfilledStar")!
+    
     // add url and build in view did appear
     // add function that downloads image
 
@@ -36,6 +40,9 @@ class MovieDetailViewController: UIViewController {
             print(imageUrl)
             plotSummary.text = plotOverview
         }
+        
+        // add bar button
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: unfilledStar, style: .Plain, target: self, action: "addFavorite")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -107,15 +114,13 @@ class MovieDetailViewController: UIViewController {
         // Tasks start in the suspended state, so resume it to start immediately
         task.resume()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func addFavorite() {
+        // make sure favorite star appears
+        if navigationItem.rightBarButtonItem?.image == unfilledStar {
+            navigationItem.rightBarButtonItem!.image = filledStar
+        } else {
+            navigationItem.rightBarButtonItem!.image = unfilledStar
+        }
     }
-    */
-
 }
