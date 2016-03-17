@@ -71,7 +71,7 @@ class MovieDetailViewController: UIViewController {
             self._activityIndicator = ActivityIndicatorView()
             self.view.addSubview(_activityIndicator!)
         }
-        
+        print("large image url: \(imageUrl)")
         // call downloadwithclosure
         downloadImageWithClosure(imageUrl!)
      }

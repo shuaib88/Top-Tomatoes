@@ -35,7 +35,7 @@ class ActivityIndicatorView: UIView {
         }
         
         // and create what it looks like
-        self.backgroundColor = UIColor.blueColor()
+        self.backgroundColor = self.superview!.tintColor
         self.layer.cornerRadius = 5
         
         self.center = self.superview!.center

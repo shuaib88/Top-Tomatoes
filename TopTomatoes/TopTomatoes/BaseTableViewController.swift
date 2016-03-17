@@ -24,6 +24,12 @@ class BaseTableViewController: UITableViewController {
     // get initial data
     override func viewWillAppear(animated: Bool) {
         
+        let tintColor = self.view.tintColor;
+        print(tintColor)
+        
+        let blueColor = UIColor.blueColor()
+        print(blueColor)
+        
         if let _ = _activityIndicator {
         } else {
             self._activityIndicator = ActivityIndicatorView()
