@@ -16,6 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Register default values for settings
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let defaults = [ "name_preference" : "Shuaib Ahmed", "slider_preference" : 1.0]
+
+        userDefaults.registerDefaults(defaults)
+        userDefaults.synchronize()
+//        print(userDefaults.dictionaryRepresentation())
+        
+        // set the defaults
+        if let date = userDefaults.objectForKey("firstLaunch"){
+            print("Not First Launch: ✌️, First Launch: \(date) ")
+        } else {
+            userDefaults.setObject(NSDate(), forKey: "firstLaunch")
+            print("First Launch:🖕, Date: \(userDefaults.objectForKey("firstLaunch"))")
+        }
+        
         return true
     }
 
@@ -35,6 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
 
     func applicationWillTerminate(application: UIApplication) {

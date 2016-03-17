@@ -21,14 +21,48 @@ class BaseTableViewController: UITableViewController {
     
     var _activityIndicator: ActivityIndicatorView?
     
+    var myDefaults = NSUserDefaults.standardUserDefaults()
+    
+    func showDefaults() {
+        
+        // Register default values for settings
+        let namePreference = myDefaults.stringForKey("name_preference")
+        let sliderPreference = myDefaults.doubleForKey("slider_preference")
+        let enabledPreference = myDefaults.boolForKey("enabled_preference")
+        
+        print("Name: \(namePreference)")
+        print("Slider: \(sliderPreference)")
+        print("Enabled: \(enabledPreference)")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        showDefaults()
+    }
+    
+    /// - Attributions: http://stackoverflow.com/questions/30059353/show-splash-screen-each-time-app-becomes-active
+    func getTopViewController() -> UIViewController?{
+        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController{
+            while ((topController.presentedViewController) != nil) {
+                topController = topController.presentedViewController!
+            }
+            return topController
+        }
+        return nil
+    }
+    
     // get initial data
     override func viewWillAppear(animated: Bool) {
         
-        let tintColor = self.view.tintColor;
-        print(tintColor)
+        let center = NSNotificationCenter.defaultCenter()
         
-        let blueColor = UIColor.blueColor()
-        print(blueColor)
+        center.addObserver(self, selector: "addSplashView", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        
+        center.addObserver(self, selector: "setWasSplashShownFalse", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+        // if not shown before
+        wasSplashShown()
         
         if let _ = _activityIndicator {
         } else {
@@ -55,6 +89,7 @@ class BaseTableViewController: UITableViewController {
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
+            
         }
     }
     
@@ -64,6 +99,8 @@ class BaseTableViewController: UITableViewController {
         // remove activity indicator
 //        sleep(1)
         self._activityIndicator!.removeFromSuperview()
+        
+
     }
     
     // MARK: - Table view data source
@@ -211,6 +248,53 @@ class BaseTableViewController: UITableViewController {
         
         self.presentViewController(alertController, animated: true) {
             return
+        }
+    }
+    
+    //
+    func setWasSplashShownFalse() {
+        myDefaults.setBool(false, forKey: "wasSplashShown")
+    }
+    
+    // adds splash for first time launch
+    func wasSplashShown() -> Void {
+        if myDefaults.boolForKey("wasSplashShown") {
+            
+        } else {
+            addSplashView()
+            myDefaults.setBool(true, forKey: "wasSplashShown")
+        }
+    }
+
+    // adds splashview to top of view
+    func addSplashView() -> Void {
+        let splashView = UIView(frame: self.view.frame)
+        splashView.backgroundColor = self.view.tintColor
+        let devName = UILabel(frame: CGRectMake(0,0,200,100))
+        devName.lineBreakMode = .ByWordWrapping
+        devName.numberOfLines = 0
+        devName.text = "Shuaib Ahmed \n Top Tomatoes"
+        devName.textColor = UIColor.whiteColor()
+        devName.center.x = self.view.center.x
+        devName.center.y = self.view.center.y - 50
+        devName.textAlignment = .Center
+        splashView.addSubview(devName)
+        
+        let tomatoImage = UIImage(named: "tomato")
+        let tomatoView = UIImageView(image: tomatoImage)
+        tomatoView.center.x = self.view.center.x
+        tomatoView.center.y = self.view.center.y
+        
+        splashView.addSubview(tomatoView)
+        
+        let topViewController = getTopViewController()
+        
+        topViewController?.view.addSubview(splashView)
+        
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            //put your code which should be executed with a delay here
+            splashView.removeFromSuperview()
         }
     }
     

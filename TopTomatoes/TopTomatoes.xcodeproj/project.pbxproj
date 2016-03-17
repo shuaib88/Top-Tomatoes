@@ -10,6 +10,9 @@
 		9812FACC1C9A03850026CE30 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */; };
 		9812FAD01C9A060C0026CE30 /* UpcomingMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */; };
 		9812FAD21C9A319F0026CE30 /* FavoriteMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */; };
+		9812FAD81C9A8D4C0026CE30 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9812FAD71C9A8D4C0026CE30 /* Settings.bundle */; };
+		9812FADA1C9A97540026CE30 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9812FAD91C9A97540026CE30 /* SplashScreen.storyboard */; };
+		9812FADC1C9AA56B0026CE30 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FADB1C9AA56B0026CE30 /* SplashScreenViewController.swift */; };
 		981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */; };
 		98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DA1C83D54A0048E685 /* AppDelegate.swift */; };
 		98A548E21C83D54A0048E685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E01C83D54A0048E685 /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 		9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpcomingMovieTableViewController.swift; path = ../UpcomingMovieTableViewController.swift; sourceTree = "<group>"; };
 		9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewController.swift; sourceTree = "<group>"; };
+		9812FAD71C9A8D4C0026CE30 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		9812FAD91C9A97540026CE30 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		9812FADB1C9AA56B0026CE30 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		98A548D71C83D54A0048E685 /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A548DA1C83D54A0048E685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 		98A548CE1C83D54A0048E685 = {
 			isa = PBXGroup;
 			children = (
+				9812FAD71C9A8D4C0026CE30 /* Settings.bundle */,
 				98A548D91C83D54A0048E685 /* TopTomatoes */,
 				98A548F01C83D54A0048E685 /* TopTomatoesTests */,
 				98A548D81C83D54A0048E685 /* Products */,
@@ -103,6 +110,8 @@
 				98A548E01C83D54A0048E685 /* Main.storyboard */,
 				98A548E31C83D54A0048E685 /* Assets.xcassets */,
 				98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */,
+				9812FAD91C9A97540026CE30 /* SplashScreen.storyboard */,
+				9812FADB1C9AA56B0026CE30 /* SplashScreenViewController.swift */,
 				98A548E81C83D54A0048E685 /* Info.plist */,
 			);
 			path = TopTomatoes;
@@ -199,8 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9812FAD81C9A8D4C0026CE30 /* Settings.bundle in Resources */,
 				98A548E71C83D54A0048E685 /* LaunchScreen.storyboard in Resources */,
 				98A548E41C83D54A0048E685 /* Assets.xcassets in Resources */,
+				9812FADA1C9A97540026CE30 /* SplashScreen.storyboard in Resources */,
 				98A548E21C83D54A0048E685 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +238,7 @@
 				981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */,
 				9812FAD21C9A319F0026CE30 /* FavoriteMovieViewController.swift in Sources */,
 				98B5B3541C8CFD51009EA492 /* MovieDetailViewController.swift in Sources */,
+				9812FADC1C9AA56B0026CE30 /* SplashScreenViewController.swift in Sources */,
 				98A549011C8515ED0048E685 /* TMDBNetworkingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

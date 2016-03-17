@@ -136,6 +136,9 @@ class MovieDetailViewController: UIViewController {
     
     // This method managers the favorite star showing + updating what is stored in the favorites array
     func addFavorite() {
+        
+        print("addFavorites button pressed")
+        
         // update star
         if navigationItem.rightBarButtonItem?.image == unfilledStar {
             navigationItem.rightBarButtonItem!.image = filledStar
@@ -152,14 +155,13 @@ class MovieDetailViewController: UIViewController {
         
         // add or remove in favorites
         if isCurrentMovieInFavorites() {
-            print("removing from")
+            print("removing from favorites")
             // remove from favorites
             favoritesArray.removeAtIndex(favMovieIndex())
 
         } else {
-            print("not in favorites")
+            print("adding to favorites")
             // add to favorites
-//            favoritesArray.append(detailItem)
             favoritesArray.append(passedDetailItem)
         }
         
