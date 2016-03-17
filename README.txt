@@ -15,3 +15,5 @@ Attributions:
 /// - Attributions: thanks to The Movie Database for providing a free API to get information about current movies https://www.themoviedb.org/
 
 /// - Attributions: thanks to Prof. Andrew Binkowski for the code for downloading images
+
+/// - Attributions: http://stackoverflow.com/questions/7192088/how-to-set-top-left-alignment-for-uilabel-for-ios-application for top aligned text

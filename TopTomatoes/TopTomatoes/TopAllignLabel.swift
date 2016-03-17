@@ -4,7 +4,7 @@
 //
 //  Created by Shuaib Ahmed on 3/17/16.
 //  Copyright © 2016 Shuaib Labs. All rights reserved.
-/// - Attributions: http://stackoverflow.com/questions/7192088/how-to-set-top-left-alignment-for-uilabel-for-ios-application
+/// - Attributions: http://stackoverflow.com/questions/7192088/how-to-set-top-left-alignment-for-uilabel-for-ios-application for top aligned text
 
 import UIKit
 
