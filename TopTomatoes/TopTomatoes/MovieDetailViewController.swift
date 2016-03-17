@@ -18,6 +18,9 @@ class MovieDetailViewController: UIViewController {
     var movieimage: UIImage?
     var imageUrl: String?
     var plotOverview: String?
+    var voteAverage: String?
+    var posterPath: String?
+    var overview: String?
     
     // activity indicator
     var _activityIndicator: ActivityIndicatorView?
@@ -26,8 +29,10 @@ class MovieDetailViewController: UIViewController {
     let filledStar: UIImage = UIImage(named: "star")!
     let unfilledStar: UIImage = UIImage(named: "unfilledStar")!
     
-    // add url and build in view did appear
-    // add function that downloads image
+    // for storing favorites
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var favoritesArray = [[String:AnyObject]]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +46,22 @@ class MovieDetailViewController: UIViewController {
             plotSummary.text = plotOverview
         }
         
+        // check if favorites array exists, if not -- add it
+        if let favArray = defaults.objectForKey("favoritesArray") as! [[String:AnyObject]]? {
+                favoritesArray = favArray
+        } else {
+            // initializes defaults with an empty array of strings
+//            let defaultsArray: [[String:AnyObject]] = []
+            defaults.setObject(favoritesArray, forKey: "favoritesArray")
+        }
+        
+        // check if current item is in favorites
+        if isCurrentMovieInFavorites() {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: filledStar, style: .Plain, target: self, action: "addFavorite")
+        } else {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: unfilledStar, style: .Plain, target: self, action: "addFavorite")
+        }
         // add bar button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: unfilledStar, style: .Plain, target: self, action: "addFavorite")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -116,11 +135,93 @@ class MovieDetailViewController: UIViewController {
     }
     
     func addFavorite() {
-        // make sure favorite star appears
+        // update star
         if navigationItem.rightBarButtonItem?.image == unfilledStar {
             navigationItem.rightBarButtonItem!.image = filledStar
         } else {
             navigationItem.rightBarButtonItem!.image = unfilledStar
         }
+        
+        // create detailItem object
+        var detailItem = [String:String]()
+        detailItem["title"] = movietitle
+        detailItem["vote_average"] = voteAverage
+        detailItem["poster_path"] = posterPath
+        detailItem["overview"] = overview
+        
+        // add or remove in favorites
+        if isCurrentMovieInFavorites() {
+            print("removing from")
+            // remove from favorites
+            favoritesArray.removeAtIndex(favMovieIndex())
+
+        } else {
+            print("not in favorites")
+            // add to favorites
+            favoritesArray.append(detailItem)
+        }
+        
+        // re-add the array to nsuserdefaults
+        defaults.setObject(favoritesArray, forKey: "favoritesArray")
+        
+        print(favoritesArray.count)
+        
+//        if var array = defaults.objectForKey("favoritesArray") as! [[String:AnyObject]]? {
+//            
+//            // append item to array
+//            array.append(detailItem!)
+//            
+//            // re-add the array to nsuserdefaults
+//            defaults.setObject(array, forKey: "favoritesArray")
+//            
+//            // updates star
+//            checkIfCurrentArticleInFavorites()
+//            
+//        } else {
+//            // initializes defaults with an empty array of strings
+//            let defaultsArray: [[String:AnyObject]] = []
+//            defaults.setObject(defaultsArray, forKey: "favoritesArray")
+//        }
+    }
+    
+    func isCurrentMovieInFavorites() -> Bool {
+        
+        var bool = false
+        
+        let favoritesArray = defaults.valueForKey("favoritesArray") as! [[String:AnyObject]]
+        
+        if favoritesArray.count == 0 {
+            bool = false
+        }
+
+        for savedFavorite in favoritesArray {
+            if savedFavorite["title"] as? String == movietitle {
+                bool = true
+            } else {
+                bool = false
+            }
+        }
+        
+        return bool
+    }
+
+    // find index assuming it exists - dangerous function
+    func favMovieIndex() -> Int {
+        
+        var count = 1000
+        
+        let favoritesArray = defaults.valueForKey("favoritesArray") as! [[String:AnyObject]]
+        
+        for savedFavorite in favoritesArray {
+            count = 0
+            if savedFavorite["title"] as? String != movietitle {
+                count += 1
+            } else {
+                break
+            }
+        }
+        
+        return count
+        
     }
 }

@@ -183,6 +183,8 @@ class BaseTableViewController: UITableViewController {
             movieDetailController.movieimage = selectedMovieCell.thumbImage.image
             movieDetailController.imageUrl = logoimageURL
             movieDetailController.plotOverview = selectedMovie["overview"] as? String
+            movieDetailController.voteAverage = selectedMovie["vote_average"] as? String
+            movieDetailController.posterPath = selectedMovie["poster_path"] as? String
         }
     }
     
