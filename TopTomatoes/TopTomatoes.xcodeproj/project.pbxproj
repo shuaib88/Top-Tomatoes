@@ -13,6 +13,7 @@
 		9812FAD81C9A8D4C0026CE30 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9812FAD71C9A8D4C0026CE30 /* Settings.bundle */; };
 		9812FADA1C9A97540026CE30 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9812FAD91C9A97540026CE30 /* SplashScreen.storyboard */; };
 		9812FADC1C9AA56B0026CE30 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FADB1C9AA56B0026CE30 /* SplashScreenViewController.swift */; };
+		9812FAE01C9AD1510026CE30 /* TopAllignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FADF1C9AD1510026CE30 /* TopAllignLabel.swift */; };
 		981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */; };
 		98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DA1C83D54A0048E685 /* AppDelegate.swift */; };
 		98A548E21C83D54A0048E685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E01C83D54A0048E685 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		9812FAD71C9A8D4C0026CE30 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9812FAD91C9A97540026CE30 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		9812FADB1C9AA56B0026CE30 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		9812FADF1C9AD1510026CE30 /* TopAllignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopAllignLabel.swift; sourceTree = "<group>"; };
 		981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		98A548D71C83D54A0048E685 /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A548DA1C83D54A0048E685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				98A548DA1C83D54A0048E685 /* AppDelegate.swift */,
 				9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */,
+				9812FADF1C9AD1510026CE30 /* TopAllignLabel.swift */,
 				98A548FC1C83F53C0048E685 /* MovieTableViewController.swift */,
 				9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */,
 				9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */,
@@ -234,6 +237,7 @@
 				98A548FF1C83FD1C0048E685 /* MovieTableViewCell.swift in Sources */,
 				9812FAD01C9A060C0026CE30 /* UpcomingMovieTableViewController.swift in Sources */,
 				98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */,
+				9812FAE01C9AD1510026CE30 /* TopAllignLabel.swift in Sources */,
 				98A548FD1C83F53C0048E685 /* MovieTableViewController.swift in Sources */,
 				981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */,
 				9812FAD21C9A319F0026CE30 /* FavoriteMovieViewController.swift in Sources */,
