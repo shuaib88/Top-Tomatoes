@@ -4,7 +4,7 @@
 //
 //  Created by Shuaib Ahmed on 3/16/16.
 //  Copyright © 2016 Shuaib Labs. All rights reserved.
-//
+/// - Attributions: thanks to The Movie Database for providing a free API to get information about current movies https://www.themoviedb.org/
 
 import Foundation
 
