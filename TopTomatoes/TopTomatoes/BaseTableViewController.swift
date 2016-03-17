@@ -54,7 +54,7 @@ class BaseTableViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         // remove activity indicator
-        sleep(1)
+//        sleep(1)
         self._activityIndicator!.removeFromSuperview()
     }
     
@@ -134,6 +134,7 @@ class BaseTableViewController: UITableViewController {
         
         cell.movieTitle.text = movieResult["title"]! as? String
         
+        print(movieResult["vote_average"]!.dynamicType)
         let voteFloat = movieResult["vote_average"]! as? Float
         let voteAverage = String(format:"%.1f", voteFloat!)
         cell.averageVote.text = "Rating: " + voteAverage
@@ -185,6 +186,8 @@ class BaseTableViewController: UITableViewController {
             movieDetailController.plotOverview = selectedMovie["overview"] as? String
             movieDetailController.voteAverage = selectedMovie["vote_average"] as? String
             movieDetailController.posterPath = selectedMovie["poster_path"] as? String
+            
+            movieDetailController.passedDetailItem = selectedMovie as [String:AnyObject]
         }
     }
     

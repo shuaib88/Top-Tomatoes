@@ -20,7 +20,6 @@ class MovieDetailViewController: UIViewController {
     var plotOverview: String?
     var voteAverage: String?
     var posterPath: String?
-    var overview: String?
     
     // activity indicator
     var _activityIndicator: ActivityIndicatorView?
@@ -32,6 +31,7 @@ class MovieDetailViewController: UIViewController {
     // for storing favorites
     let defaults = NSUserDefaults.standardUserDefaults()
     var favoritesArray = [[String:AnyObject]]()
+    var passedDetailItem = [String:AnyObject]()
     
 
     override func viewDidLoad() {
@@ -51,7 +51,6 @@ class MovieDetailViewController: UIViewController {
                 favoritesArray = favArray
         } else {
             // initializes defaults with an empty array of strings
-//            let defaultsArray: [[String:AnyObject]] = []
             defaults.setObject(favoritesArray, forKey: "favoritesArray")
         }
         
@@ -147,7 +146,7 @@ class MovieDetailViewController: UIViewController {
         detailItem["title"] = movietitle
         detailItem["vote_average"] = voteAverage
         detailItem["poster_path"] = posterPath
-        detailItem["overview"] = overview
+        detailItem["overview"] = plotOverview
         
         // add or remove in favorites
         if isCurrentMovieInFavorites() {
@@ -158,30 +157,14 @@ class MovieDetailViewController: UIViewController {
         } else {
             print("not in favorites")
             // add to favorites
-            favoritesArray.append(detailItem)
+//            favoritesArray.append(detailItem)
+            favoritesArray.append(passedDetailItem)
         }
         
         // re-add the array to nsuserdefaults
         defaults.setObject(favoritesArray, forKey: "favoritesArray")
         
         print(favoritesArray.count)
-        
-//        if var array = defaults.objectForKey("favoritesArray") as! [[String:AnyObject]]? {
-//            
-//            // append item to array
-//            array.append(detailItem!)
-//            
-//            // re-add the array to nsuserdefaults
-//            defaults.setObject(array, forKey: "favoritesArray")
-//            
-//            // updates star
-//            checkIfCurrentArticleInFavorites()
-//            
-//        } else {
-//            // initializes defaults with an empty array of strings
-//            let defaultsArray: [[String:AnyObject]] = []
-//            defaults.setObject(defaultsArray, forKey: "favoritesArray")
-//        }
     }
     
     func isCurrentMovieInFavorites() -> Bool {
@@ -205,7 +188,7 @@ class MovieDetailViewController: UIViewController {
         return bool
     }
 
-    // find index assuming it exists - dangerous function
+    // find index assuming it exists - only call if isCurrentMovieInFavorites is true
     func favMovieIndex() -> Int {
         
         var count = 1000
@@ -222,6 +205,5 @@ class MovieDetailViewController: UIViewController {
         }
         
         return count
-        
     }
 }

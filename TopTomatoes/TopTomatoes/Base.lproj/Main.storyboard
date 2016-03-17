@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Movie Table View Controller-->
+        <!--Playing Now-->
         <scene sceneID="KJ2-VB-PrC">
             <objects>
                 <tableViewController storyboardIdentifier="MovieTable" id="yVi-oV-mZG" customClass="MovieTableViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                             <outlet property="delegate" destination="yVi-oV-mZG" id="TGH-9F-YHV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wiL-Gh-f5G"/>
+                    <navigationItem key="navigationItem" title="Playing Now" id="wiL-Gh-f5G"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qE6-PB-abP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIX-To-kdQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079.5" y="-316.5"/>
+            <point key="canvasLocation" x="2023.5" y="866.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -180,9 +180,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUR-Nq-IAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741.5" y="1178.5"/>
+            <point key="canvasLocation" x="773.5" y="866.5"/>
         </scene>
-        <!--Upcoming Movie Table View Controller-->
+        <!--Upcoming-->
         <scene sceneID="ava-s2-WPv">
             <objects>
                 <tableViewController storyboardIdentifier="UpcomingMovieTable" id="gtz-RY-s3f" customClass="UpcomingMovieTableViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,16 +232,16 @@
                             <outlet property="delegate" destination="gtz-RY-s3f" id="Fth-BK-q1c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="VWT-VB-PwE"/>
+                    <navigationItem key="navigationItem" title="Upcoming" id="VWT-VB-PwE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSd-ye-yLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1346.5" y="-0.5"/>
         </scene>
-        <!--Upcoming Movie Table View Controller-->
+        <!--Favorites-->
         <scene sceneID="9qN-i8-l3N">
             <objects>
-                <tableViewController storyboardIdentifier="FavoritesMovieTable" id="YEI-0H-pLO" customClass="UpcomingMovieTableViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FavoritesMovieTable" id="YEI-0H-pLO" customClass="FavoriteMovieViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="E2E-wd-8kS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,6 +279,7 @@
                                     <outlet property="averageVote" destination="G8I-Au-N3m" id="OSw-Fg-ohM"/>
                                     <outlet property="movieTitle" destination="NeF-8C-zxp" id="LKc-7c-N4R"/>
                                     <outlet property="thumbImage" destination="KP8-Gp-sUY" id="NL3-Dj-kuu"/>
+                                    <segue destination="jW9-Og-oMC" kind="show" id="cyp-Qz-NLX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -287,11 +288,11 @@
                             <outlet property="delegate" destination="YEI-0H-pLO" id="ctp-ZK-Rmo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="coW-K7-mRT"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="coW-K7-mRT"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VMI-Rz-Gt8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="1145"/>
+            <point key="canvasLocation" x="1353.5" y="866.5"/>
         </scene>
     </scenes>
     <resources>
@@ -301,6 +302,6 @@
         <image name="star" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Roz-TK-JxX"/>
+        <segue reference="cyp-Qz-NLX"/>
     </inferredMetricsTieBreakers>
 </document>
