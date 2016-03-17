@@ -10,10 +10,9 @@
 		9812FACC1C9A03850026CE30 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */; };
 		9812FAD01C9A060C0026CE30 /* UpcomingMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */; };
 		9812FAD21C9A319F0026CE30 /* FavoriteMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */; };
+		9812FAD41C9A6B740026CE30 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9812FAD31C9A6B740026CE30 /* README.md */; };
 		981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */; };
 		98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DA1C83D54A0048E685 /* AppDelegate.swift */; };
-		98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DC1C83D54A0048E685 /* FirstViewController.swift */; };
-		98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A548DE1C83D54A0048E685 /* SecondViewController.swift */; };
 		98A548E21C83D54A0048E685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E01C83D54A0048E685 /* Main.storyboard */; };
 		98A548E41C83D54A0048E685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E31C83D54A0048E685 /* Assets.xcassets */; };
 		98A548E71C83D54A0048E685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */; };
@@ -38,11 +37,10 @@
 		9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpcomingMovieTableViewController.swift; path = ../UpcomingMovieTableViewController.swift; sourceTree = "<group>"; };
 		9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewController.swift; sourceTree = "<group>"; };
+		9812FAD31C9A6B740026CE30 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		98A548D71C83D54A0048E685 /* TopTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A548DA1C83D54A0048E685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98A548DC1C83D54A0048E685 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		98A548DE1C83D54A0048E685 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		98A548E11C83D54A0048E685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98A548E31C83D54A0048E685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98A548E61C83D54A0048E685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,21 +93,20 @@
 		98A548D91C83D54A0048E685 /* TopTomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				9812FAD31C9A6B740026CE30 /* README.md */,
 				98A548DA1C83D54A0048E685 /* AppDelegate.swift */,
-				98A548DC1C83D54A0048E685 /* FirstViewController.swift */,
-				98A548FC1C83F53C0048E685 /* MovieTableViewController.swift */,
 				9812FACB1C9A03850026CE30 /* BaseTableViewController.swift */,
-				9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */,
+				98A548FC1C83F53C0048E685 /* MovieTableViewController.swift */,
 				9812FACF1C9A060C0026CE30 /* UpcomingMovieTableViewController.swift */,
+				9812FAD11C9A319F0026CE30 /* FavoriteMovieViewController.swift */,
 				98B5B3531C8CFD51009EA492 /* MovieDetailViewController.swift */,
-				98A549001C8515ED0048E685 /* TMDBNetworkingManager.swift */,
 				98A548FE1C83FD1C0048E685 /* MovieTableViewCell.swift */,
-				98A548DE1C83D54A0048E685 /* SecondViewController.swift */,
+				98A549001C8515ED0048E685 /* TMDBNetworkingManager.swift */,
+				981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */,
 				98A548E01C83D54A0048E685 /* Main.storyboard */,
 				98A548E31C83D54A0048E685 /* Assets.xcassets */,
 				98A548E51C83D54A0048E685 /* LaunchScreen.storyboard */,
 				98A548E81C83D54A0048E685 /* Info.plist */,
-				981E5D311C98BF33000B91B0 /* ActivityIndicator.swift */,
 			);
 			path = TopTomatoes;
 			sourceTree = "<group>";
@@ -228,14 +225,13 @@
 				9812FACC1C9A03850026CE30 /* BaseTableViewController.swift in Sources */,
 				98A548FF1C83FD1C0048E685 /* MovieTableViewCell.swift in Sources */,
 				9812FAD01C9A060C0026CE30 /* UpcomingMovieTableViewController.swift in Sources */,
-				98A548DF1C83D54A0048E685 /* SecondViewController.swift in Sources */,
 				98A548DB1C83D54A0048E685 /* AppDelegate.swift in Sources */,
 				98A548FD1C83F53C0048E685 /* MovieTableViewController.swift in Sources */,
+				9812FAD41C9A6B740026CE30 /* README.md in Sources */,
 				981E5D321C98BF33000B91B0 /* ActivityIndicator.swift in Sources */,
 				9812FAD21C9A319F0026CE30 /* FavoriteMovieViewController.swift in Sources */,
 				98B5B3541C8CFD51009EA492 /* MovieDetailViewController.swift in Sources */,
 				98A549011C8515ED0048E685 /* TMDBNetworkingManager.swift in Sources */,
-				98A548DD1C83D54A0048E685 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

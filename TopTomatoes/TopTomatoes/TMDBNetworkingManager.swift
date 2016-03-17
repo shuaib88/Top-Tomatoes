@@ -4,7 +4,9 @@
 //
 //  Created by Shuaib Ahmed on 2/29/16.
 //  Copyright © 2016 Shuaib Labs. All rights reserved.
-//
+
+//  This is a networking singleton that can be used to
+//  Make API calls and retrieve JSON data
 
 import Foundation
 import UIKit

@@ -4,7 +4,9 @@
 //
 //  Created by Shuaib Ahmed on 3/15/16.
 //  Copyright © 2016 Shuaib Labs. All rights reserved.
-//
+//  
+//  This activity indicator can be used anywhere to show a
+//  Spinning blue activity indicator
 
 import Foundation
 import UIKit

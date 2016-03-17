@@ -82,6 +82,7 @@ class MovieDetailViewController: UIViewController {
         self._activityIndicator!.removeFromSuperview()
     }
     
+    // downloads image using an api call
     func downloadImageWithClosure(url: String) {
         let startTime = CFAbsoluteTimeGetCurrent()
         
@@ -95,7 +96,7 @@ class MovieDetailViewController: UIViewController {
             print("Elaspsed Time: " + (NSString(format: "%2.5f", CFAbsoluteTimeGetCurrent() - startTime) as String))
         }
     }
-    
+    // helper function that actually opens an NSURL session
     func downloadImage(url: NSURL, completion: (UIImage)->()) {
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
@@ -133,6 +134,7 @@ class MovieDetailViewController: UIViewController {
         task.resume()
     }
     
+    // This method managers the favorite star showing + updating what is stored in the favorites array
     func addFavorite() {
         // update star
         if navigationItem.rightBarButtonItem?.image == unfilledStar {
@@ -167,6 +169,7 @@ class MovieDetailViewController: UIViewController {
         print(favoritesArray.count)
     }
     
+    // checks if movie on the page is in the favorites array
     func isCurrentMovieInFavorites() -> Bool {
         
         var bool = false
@@ -188,7 +191,7 @@ class MovieDetailViewController: UIViewController {
         return bool
     }
 
-    // find index assuming it exists - only call if isCurrentMovieInFavorites is true
+    // finds index of movie in favorites array assuming it exists - only call if isCurrentMovieInFavorites is true
     func favMovieIndex() -> Int {
         
         var count = 1000
