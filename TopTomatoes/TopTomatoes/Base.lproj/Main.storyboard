@@ -74,23 +74,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-gI-uGM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="8gi-gI-uGM">
                                 <rect key="frame" x="37" y="136" width="145" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="ami-uN-4eR"/>
+                                    <constraint firstAttribute="height" constant="213" id="n4H-w5-Z8R"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbB-8A-Upn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbB-8A-Upn">
                                 <rect key="frame" x="37" y="72" width="263" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Jf4-CI-Od7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plot Summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hg-IG-ngy" customClass="TopAllignLabel" customModule="TopTomatoes" customModuleProvider="target">
-                                <rect key="frame" x="37" y="372" width="300" height="138"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot Summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hg-IG-ngy" customClass="TopAllignLabel" customModule="TopTomatoes" customModuleProvider="target">
+                                <rect key="frame" x="37" y="372" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8gi-gI-uGM" firstAttribute="top" secondItem="zbB-8A-Upn" secondAttribute="bottom" constant="8" id="7YB-av-oOf"/>
+                            <constraint firstItem="zbB-8A-Upn" firstAttribute="top" secondItem="gnV-RT-CQi" secondAttribute="bottom" constant="8" id="ASu-vd-JgX"/>
+                            <constraint firstItem="9hg-IG-ngy" firstAttribute="leading" secondItem="gyM-eH-HV9" secondAttribute="leading" constant="37" id="PE7-hP-2ch"/>
+                            <constraint firstItem="zbB-8A-Upn" firstAttribute="leading" secondItem="gyM-eH-HV9" secondAttribute="leading" constant="37" id="XOu-ZE-uBT"/>
+                            <constraint firstAttribute="trailing" secondItem="9hg-IG-ngy" secondAttribute="trailing" constant="38" id="ZB0-U9-JzS"/>
+                            <constraint firstAttribute="trailing" secondItem="zbB-8A-Upn" secondAttribute="trailing" constant="75" id="kIW-og-qoc"/>
+                            <constraint firstItem="9hg-IG-ngy" firstAttribute="top" secondItem="8gi-gI-uGM" secondAttribute="bottom" constant="23" id="wHD-Jl-1WW"/>
+                            <constraint firstItem="8gi-gI-uGM" firstAttribute="leading" secondItem="gyM-eH-HV9" secondAttribute="leading" constant="37" id="y7p-98-CBW"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

@@ -43,6 +43,4 @@ class TopAllignLabel: UILabel {
         let r = self.textRectForBounds(rect, limitedToNumberOfLines: self.numberOfLines)
         super.drawTextInRect(r)
     }
-
-
 }
