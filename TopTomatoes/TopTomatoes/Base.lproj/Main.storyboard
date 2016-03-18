@@ -47,7 +47,7 @@
                                     <outlet property="averageVote" destination="sgs-7A-Z8T" id="ppZ-S3-3TU"/>
                                     <outlet property="movieTitle" destination="udh-zG-D8r" id="mRU-Cy-Of5"/>
                                     <outlet property="thumbImage" destination="MAh-xh-oPx" id="SNZ-VM-odY"/>
-                                    <segue destination="jW9-Og-oMC" kind="show" identifier="showMovieDetails" id="hMe-4d-TeS"/>
+                                    <segue destination="LaG-I3-2t1" kind="show" id="72C-Uz-w45"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -311,6 +311,120 @@
             </objects>
             <point key="canvasLocation" x="1353.5" y="866.5"/>
         </scene>
+        <!--Movie Detailin Scroll View Controller-->
+        <scene sceneID="akK-rt-Jn2">
+            <objects>
+                <viewController id="LaG-I3-2t1" customClass="MovieDetailinScrollViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rYs-ab-Umd"/>
+                        <viewControllerLayoutGuide type="bottom" id="fQF-jy-WDe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6i-YY-6ej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y9Q-es-a3b">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="cj7-Xf-qo5">
+                                        <rect key="frame" x="37" y="145" width="145" height="213"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="145" id="ckc-1y-Ghq"/>
+                                            <constraint firstAttribute="height" constant="213" id="eX6-Pe-15Z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOJ-y5-5vt">
+                                        <rect key="frame" x="37" y="81" width="263" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="KQC-pv-dkg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Plot Summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62K-z4-yYx" customClass="TopAllignLabel" customModule="TopTomatoes" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="381" width="300" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="movieImage" destination="cj7-Xf-qo5" id="pAG-JH-CJf"/>
+                        <outlet property="movieTitle" destination="AOJ-y5-5vt" id="Snw-dF-zwg"/>
+                        <outlet property="plotSummary" destination="62K-z4-yYx" id="6of-ty-5K9"/>
+                        <outlet property="scrollView" destination="y9Q-es-a3b" id="StW-tb-z4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkC-Mo-2p0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963.5" y="-856.5"/>
+        </scene>
+        <!--Movie Detailin Scroll View Controller-->
+        <scene sceneID="eYm-Ri-VCZ">
+            <objects>
+                <viewController id="obG-Ql-bwH" customClass="MovieDetailinScrollViewController" customModule="TopTomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ao-qp-pbE"/>
+                        <viewControllerLayoutGuide type="bottom" id="hO8-ML-gdo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DLr-An-dnw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="as4-Qr-UCc">
+                                <rect key="frame" x="37" y="136" width="145" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="ODs-Az-qca"/>
+                                    <constraint firstAttribute="height" constant="213" id="f3n-Yg-9B5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS0-pH-lwK">
+                                <rect key="frame" x="37" y="72" width="263" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="HRN-CT-9Cn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Plot Summary" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW4-Xh-2rD" customClass="TopAllignLabel" customModule="TopTomatoes" customModuleProvider="target">
+                                <rect key="frame" x="37" y="372" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TW4-Xh-2rD" secondAttribute="trailing" constant="38" id="A7l-99-ehy"/>
+                            <constraint firstItem="TW4-Xh-2rD" firstAttribute="top" secondItem="as4-Qr-UCc" secondAttribute="bottom" constant="23" id="C3x-ay-vYN"/>
+                            <constraint firstItem="AS0-pH-lwK" firstAttribute="leading" secondItem="DLr-An-dnw" secondAttribute="leading" constant="37" id="DAF-Oj-FIo"/>
+                            <constraint firstAttribute="trailing" secondItem="AS0-pH-lwK" secondAttribute="trailing" constant="75" id="DHk-rq-6OB"/>
+                            <constraint firstItem="as4-Qr-UCc" firstAttribute="leading" secondItem="DLr-An-dnw" secondAttribute="leading" constant="37" id="Mqv-qG-knk"/>
+                            <constraint firstItem="TW4-Xh-2rD" firstAttribute="leading" secondItem="DLr-An-dnw" secondAttribute="leading" constant="37" id="Pjg-dE-chZ"/>
+                            <constraint firstItem="AS0-pH-lwK" firstAttribute="top" secondItem="8ao-qp-pbE" secondAttribute="bottom" constant="8" id="XnL-Vh-h1r"/>
+                            <constraint firstItem="as4-Qr-UCc" firstAttribute="top" secondItem="AS0-pH-lwK" secondAttribute="bottom" constant="8" id="pWS-gL-vY9"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="movieImage" destination="as4-Qr-UCc" id="Vga-Nc-Sbr"/>
+                        <outlet property="movieTitle" destination="AS0-pH-lwK" id="42i-fm-qnI"/>
+                        <outlet property="plotSummary" destination="TW4-Xh-2rD" id="a2c-iR-Hle"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yCn-PR-MZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453.5" y="-856.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="movieGreen" width="26" height="26"/>
@@ -319,6 +433,6 @@
         <image name="star" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hMe-4d-TeS"/>
+        <segue reference="Roz-TK-JxX"/>
     </inferredMetricsTieBreakers>
 </document>
