@@ -7,9 +7,9 @@ Fundamental structure of the app is based off a master TableViewController. All 
 
 ## Attributions:
 
-Help with splash screen - http://stackoverflow.com/questions/30059353/show-splash-screen-each-time-app-becomes-active
+Thanks to Daij-Djan for help with splash screen - http://stackoverflow.com/questions/30059353/show-splash-screen-each-time-app-becomes-active
 
-Display activity indicator - http://www.ioscreator.com/tutorials/display-activity-indicator-status-bar-ios8-swift
+Thanks to Arthur Knopper for help with display activity indicator - http://www.ioscreator.com/tutorials/display-activity-indicator-status-bar-ios8-swift
 
 Thanks to The Movie Database for providing a free API to get information about current movies https://www.themoviedb.org/
 
